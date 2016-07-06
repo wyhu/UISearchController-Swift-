@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UISearchController_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oc-R9-W3l">
+                                <rect key="frame" x="80" y="111" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="r47-ed-EkJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UT4-u8-bjx"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ncj-H0-KHc">
+                                <rect key="frame" x="5" y="56" width="310" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="CId-p6-BrK"/>
+                                    <constraint firstAttribute="height" constant="28" id="rKl-Dr-qfn"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="zlX-fr-Nvn"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="按钮1"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <color key="tintColor" red="0.95686274510000002" green="0.36470588240000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="test:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hbz-1J-11W"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BEX-4i-SnH">
+                                <rect key="frame" x="0.0" y="1022" width="320" height="419"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SUL-8s-0gs">
+                                <rect key="frame" x="0.0" y="587" width="320" height="419"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BEX-4i-SnH" firstAttribute="top" secondItem="SUL-8s-0gs" secondAttribute="bottom" constant="16" id="1TE-qi-mKC"/>
+                            <constraint firstItem="Ncj-H0-KHc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="7fQ-FY-3lU"/>
+                            <constraint firstAttribute="trailing" secondItem="Ncj-H0-KHc" secondAttribute="trailing" constant="5" id="AKN-gg-Jij"/>
+                            <constraint firstItem="Ncj-H0-KHc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="AzC-Le-BVp"/>
+                            <constraint firstItem="SUL-8s-0gs" firstAttribute="leading" secondItem="BEX-4i-SnH" secondAttribute="leading" id="MQy-AI-768"/>
+                            <constraint firstItem="6oc-R9-W3l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="bvJ-0m-QLj"/>
+                            <constraint firstItem="SUL-8s-0gs" firstAttribute="height" secondItem="BEX-4i-SnH" secondAttribute="height" id="rCT-vq-RYM"/>
+                            <constraint firstItem="SUL-8s-0gs" firstAttribute="trailing" secondItem="BEX-4i-SnH" secondAttribute="trailing" id="t9V-Fc-Vtc"/>
+                            <constraint firstItem="6oc-R9-W3l" firstAttribute="top" secondItem="Ncj-H0-KHc" secondAttribute="bottom" constant="27" id="wad-PF-8bS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="2dL-li-gQC" id="yoR-Qq-JnT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="6q0-fW-s1e">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="8Uy-J4-vJ8"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="ngI-VY-o7y"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="ZTW-KT-xVD"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="Huu-jb-oYZ"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="2dL-li-gQC">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Gph-2z-WCe"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="Ctd-2X-v0V"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="W4N-an-HWR"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="oWy-iA-tQ8"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="131" y="277"/>
+        </scene>
+    </scenes>
+</document>
